@@ -1,7 +1,7 @@
 /* Copyright (c) 2023 Promineo Tech
    Author:  Promineo Tech Academic Team
    Subject:  CSS Lab
-   FE Lab02
+   Front End Technologies Lab 02 - CSS (Questions)
 */
 /*----------------------------------------------------
 Key Terms:
@@ -42,13 +42,14 @@ PART 2: Using ID or CLASS Selectors:
 * Step 3: The caption for the top banner image is not under the image like it should be. Add a property to make the caption wrap under the image using flex.
 * Step 4: In the DIV that has the 4 images, justify the content by putting space around each image.
 * Step 5: Give the DIV that houses the "Top 5 Places to Visit..." a background color of rgb(0, 58, 66) and a border radius of 1 rem.
-* Step 6: The DIV that houses the "Tips and Reccs" appears to be squished when the screen size is less than 1100 pixels. Add to the appropriate MEDIA QUERY a property that will allow the div to wrap down and then justify the contents to the center. Start by taking a look at the CSS for that DIV outside of the MEDIA QUERY to understand how the DIV is behaving.
+* Step 6: The DIV that houses the "Tips and Recommendations" appears to be squished when the screen size is less than 1100 pixels. Add to the appropriate MEDIA QUERY a property that will allow the div to wrap down and then justify the contents to the center. Start by taking a look at the CSS for that DIV outside of the MEDIA QUERY to understand how the DIV is behaving.
 
 -----------------------------------------------------
 
 */
 
-/* ↓ YOUR CSS CODE HERE ↓  */
+ /* ↓ YOUR CSS CODE HERE ↓  */
+
 
 /* 
 The asterisk (*) selector targets every element on the page. It is called the UNIVERSAL SELECTOR. Using a temporary red border around elements can prove to be helpful with visualizing the CSS box-model. Seeing all of the margins, borders, and padding of all 
@@ -56,113 +57,139 @@ of the elements on the page can help fix issues with spacing too, especially if 
 */
 
 /* ---UNIVERSAL SELECTOR--- */
-/* OPTIONAL ↓ REMOVE COMMENTS TO SEE RED BORDER:*/
+/* OPTIONAL ↓ REMOVE COMMENTS TO SEE RED BORDER:*/ 
 
-* {
+
+
+/* *{
   border: 1px solid red;
-}
+} */
+
+
+
+
 
 /* ---ELEMENT SELECTORS--- */
 
-html {
+html{
   font-family: Calibri, 'Trebuchet MS', sans-serif;
-  background: linear-gradient(180deg, #84daf5, #89ffff, #affffa, #ffffff);
+  background: linear-gradient(180deg, 
+  #84daf5,
+  #89ffff,
+  #affffa,
+  #ffffff
+  );
 }
-body {
+body{
+  margin: 1rem 5rem;
 }
 
-h1 {
+h1{
   text-align: center;
+  filter: drop-shadow(2px 2px 1px #0f6a9e);
 }
-h2 {
+h2{
   margin: 4rem auto 1rem auto;
   text-align: center;
 }
-p,
-li {
+p, li{
+  font-size: 20px;
 }
-ol {
+ol{
   padding: 20px;
 }
 
-ol li {
+ol li{
   padding: 10px 0;
 }
-img {
+img{
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  margin: 1rem;
 }
-figcaption {
+figcaption{
   text-align: center;
+  color:rgb(0, 58, 66);
   font-weight: bold;
 }
-footer {
+footer{
+  text-align: center;
   margin: 2rem 0 2rem 0;
 }
 
 /* ---CUSTOM CLASS NAME SELECTORS--- */
 
-.banner-div {
-  display: flex;
+.banner-div{
+  display:flex;
   justify-content: center;
+  flex-wrap:wrap;
 }
-#banner-long {
-  max-width: 100%;
-  height: auto;
+#banner-long{
+  max-width:100%;
+  height:auto;
 }
-#banner-short {
-  width: 230px;
+#banner-short{
+  width:230px;
+  display:none;
 }
-.img-div {
+.img-div{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.tips-div {
+.tips-div{
   display: flex;
   flex-wrap: nowrap;
-  justify-content: start;
+  justify-content:start; 
 }
-.top-places-div {
+.top-places-div{
   max-width: 800px;
   margin: 5rem auto;
+  background-color: rgb(0, 58, 66);
   color: rgb(253, 197, 132);
+  border-radius: 1rem;
   padding: 1rem 2rem;
 }
-.top-places-div h2 {
-  text-align: center;
+.top-places-div h2{
+  text-align:center;
   margin: 1rem auto;
   font-weight: lighter;
 }
 
 /* ----- MEDIA QUERIES for RESPONSIVE DESIGN ----- */
 
-@media only screen and (max-width: 1500px) {
-  .img-div img {
+@media only screen and (max-width: 1500px){
+  .img-div img{
     width: 420px;
   }
 }
 
-@media only screen and (max-width: 1100px) {
-  .tips-div {
+@media only screen and (max-width: 1100px){
+  .tips-div{
+    flex-wrap: wrap;
+    justify-content:center; 
   }
 }
 
-@media only screen and (max-width: 500px) {
-  body {
+@media only screen and (max-width: 500px){
+  body{
     margin: 1rem;
   }
-  p,
-  li {
+  p, li{
     font-size: 16px;
   }
-  .img-div img {
+  .img-div img{
     width: 230px;
   }
-  .tips-div img {
+  .tips-div img{
     width: 230px;
   }
-  #banner-long {
+  #banner-long{
+    display: none;
   }
-  #banner-short {
+  #banner-short{
+    display:block;
   }
 }
 /* ------------------------- */
