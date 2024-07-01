@@ -52,21 +52,28 @@ Question 1. Creating & 'console.log()'ing variables \n`);
  * ↓ YOUR CODE HERE ↓ */
 
 console.log("Step 1:  Number of Seats on a Plane");
-
+var availableFlightSeats = 12;
+console.log("The number of seats left on this plane are " + availableFlightSeats)
 
 console.log("Step 2:  Cost of Groceries");
-
+var costOfGroceries = 5;
+console.log(costOfGroceries)
 
 console.log("Step 3:  Middle Initial");
-
+var middleInitial = "W";
+console.log(middleInitial);
 
 console.log("Step 4:  Is it Hot Outside?");
-
+var hotOutside = false;
+console.log(hotOutside);
 
 console.log("Step 5:  First Name");
-
+var firstName = "Tim";
+console.log(firstName);
 
 console.log("Step 6:  Street Address");
+var streetAddress = "123 Main Street";
+console.log(streetAddress);
 
 
 /*-------------------------------------------------------*/
@@ -85,34 +92,35 @@ Question 2. Creating & 'console.log()'ing variables \n`);
     console.log('Remove Plane Seats:')
 //	A customer booked 2 plane seats. Remove 2 seats from the available seats variable
 //  ↓ YOUR CODE HERE ↓
-
+console.log(availableFlightSeats - 2);
 
     console.log('Buy a Candy Bar:')
 //	Impulse candy bar purchase! Add 2.15 to the grocery total
 //  ↓ YOUR CODE HERE ↓
-
+console.log(costOfGroceries + 2);
 
     console.log('Fix a Birth Certificate:')
 //	A birth certificate was printed incorrectly, change the middle initial to something else
 //  ↓ YOUR CODE HERE ↓
-
+console.log(middleInitial = "A");
 
     console.log('Changing Seasons:')
 //	The season has changed, update the hot outside variable	to be opposite of what it was
 //  ↓ YOUR CODE HERE ↓
-    
+    console.log(hotOutside = true);
 
     console.log('Full Name:')
 //	Create a new variable called full name using the customer's
 //  first name, the middle initial, and a last name of your choice
 //  ↓ YOUR CODE HERE ↓
-
+    var fullName = firstName + middleInitial + "smith";
+    
 
     console.log('Introduce a Customer:')
 //	Print a line to the console that introduces the customer 
 //	including the name, and saying that they live at the address variable
 //  ↓ YOUR CODE HERE ↓
-
+    console.log(fullName + streetAddress);
 
 
     console.log('-----------Finished------------')

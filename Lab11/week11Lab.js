@@ -37,7 +37,16 @@
 	* Step 3: In the "replaceTextInDiv" function, after replacing the text in the DIV make sure to clear out the input value.
 	* 
 	* ↓ YOUR CODE HERE ↓ */
+	let div = $('.put-here');
+	let input = $('#input-value');
 
+	const replaceTextInDiv = ()=>{
+		let newText = input.val();
+
+		div.text(newText);
+
+		input.val('');
+	}
 
 
 
@@ -57,8 +66,8 @@
 	* 
 	* ↓ YOUR CODE HERE ↓ */
 
-
-	
+	 $('.dog').before("<div><img src='images/fish.png' width='200'></div>");
+	 $('.dog').after("<div><img src='images/cat.png' width='200'></div>");
 
 
 
@@ -75,7 +84,7 @@
 	*
 	* ↓ YOUR CODE HERE ↓ */
 
-
+$('#lorem2').remove();
 
 
 	
@@ -109,8 +118,12 @@ $.get(CATS_API_URL, (data)=> {
  	* 
  	* 
  	* ↓ YOUR CODE HERE ↓ */
-
-
+	const jokesAPI = 'https://official-joke-api.appspot.com/random_joke';
+	 $.get(jokesAPI, (data) => {
+		console.log(data);
+		$('.jokes').prepend(`<p>${data.setup}</p>`);
+		$('.jokes').append(`<p>${data.punchline}</p>`);
+	});
 
 
 
@@ -126,7 +139,7 @@ $.get(CATS_API_URL, (data)=> {
 
 		METHOD #1
 			1. type command: npm install -g json-server
-			2. type command: json-server --watch db.json
+			2. type command: 
 			3. In the terminal you should see the link that you can use to make the calls, it should look something like this:
 
 				Resources
